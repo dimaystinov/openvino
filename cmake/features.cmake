@@ -137,6 +137,13 @@ endif()
 
 ov_dependent_option (ENABLE_TBBBIND_2_5 "Enable TBBBind_2_5 static usage in OpenVINO runtime" ${ENABLE_TBBBIND_2_5_DEFAULT} "THREADING MATCHES TBB; NOT APPLE" OFF)
 
+ov_option(ENABLE_INTEL_MYRIAD "Build the NCS2 static-blob MYRIAD plugin" OFF)
+ov_dependent_option(ENABLE_MYRIAD_NCS2_TESTS "Build hardware-free NCS2 plugin tests" OFF
+                    "ENABLE_INTEL_MYRIAD" OFF)
+if(ENABLE_MYRIAD_NCS2_TESTS)
+    enable_testing()
+endif()
+
 ov_option (ENABLE_MULTI "Enables MULTI Device Plugin" ON)
 ov_option (ENABLE_AUTO "Enables AUTO Device Plugin" ON)
 ov_option (ENABLE_AUTO_BATCH "Enables Auto-Batching Plugin" ON)

@@ -1,3 +1,7 @@
+> **Roki / NCS2 fork:** this tree adds an opt-in modern MYRIAD blob plugin.
+> Build instructions, supported API and hardware-validation limits:
+> [README_NCS2_RU.md](README_NCS2_RU.md).
+
 <div align="center">
 <img src="https://storage.openvinotoolkit.org/assets/branding/openvino-logo-transparent-white-outline.svg" width="400px" alt="OpenVINO">
 
